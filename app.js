@@ -6,13 +6,13 @@ function criarGaleria(funcionario) {
     const galeria = document.getElementById('container')
 
     const img = document.createElement('img')
-    img.src = funcionario.img
+    img.src = funcionario.imagem
 
     const container = document.createElement('div')
     container.className = 'box'
 
     const titulo = document.createElement('h1')
-    titulo.className = 'Nome'
+    titulo.className = 'nome'
     titulo.textContent = funcionario.nome
 
     const cargo = document.createElement('p')
@@ -26,7 +26,7 @@ function criarGaleria(funcionario) {
 }
 
 function carregarImagens() {
-    funcionario.forEach(func => criarGaleria(func))
+    funcionario.forEach(criarGaleria)
 }
 
 carregarImagens()
